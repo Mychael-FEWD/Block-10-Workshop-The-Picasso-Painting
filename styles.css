@@ -1,0 +1,367 @@
+/******************
+ Universal Defaults 
+ ******************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+body {
+  overflow-x: hidden;
+  background-color: #ebfbee;
+}
+h1 {
+  color: #c65206;
+  font-size: 3em;
+  font-weight: 500;
+}
+main {
+  background-color: #ebfbee;
+  padding: 1em 0;
+  margin: 0 auto;
+}
+section {
+  background-color: #aad0b2;
+  width: 65%;
+  margin: 0 auto;
+}
+/**************
+Reusable Header
+***************/
+.header-flex-cont {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em 2em;
+  background-color: #c4dec9;
+}
+.nav-home:link,
+.nav-home:visited {
+  color: #eef6f0;
+  text-decoration: none;
+  font-size: 2.5em;
+  transition: all 0.5s;
+}
+.nav-home:hover,
+.nav-home:active {
+  color: #c65206;
+  text-decoration: none;
+  font-size: 2.5em;
+  transition: all 0.5s;
+}
+/*********************************
+ Creating the grid for the artwork
+*********************************/
+/* Use grid or flex.
+Use three various types of CSS units. */
+/* CURRENT STYLING IS ON A MONITOR SIZE OF large: 1600+ px*/
+#grid-cont {
+  display: grid;
+  background-color: #113719;
+  grid-template-rows: 0.48fr 1fr;
+  width: 100%;
+  row-gap: 2%;
+  margin: 2em auto;
+  padding: 0;
+}
+#grid-mini-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2%;
+  width: 100%;
+}
+.grid-minis img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+#grid-items-img img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+/**************************
+ Absolute positioning items 
+***************************/
+#img-cont {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+  width: 25%;
+}
+#grapefruit {
+  width: 35%;
+  right: 0;
+  bottom: 10%;
+  z-index: 2;
+}
+#lemons {
+  width: 20%;
+  bottom: 0%;
+  left: 1%;
+}
+
+#orange1 {
+  bottom: 28%;
+  left: 12%;
+}
+#orange2 {
+  bottom: 20%;
+  right: 5%;
+  z-index: 1;
+}
+#orange3 {
+  bottom: 1%;
+  left: 38%;
+}
+#lime1 {
+  width: 20%;
+  top: 4%;
+  left: 47%;
+  z-index: 3;
+}
+#lime2 {
+  width: 10%;
+  top: 4%;
+  left: 47%;
+  z-index: 5;
+}
+#lime3 {
+  width: 15%;
+  top: 4%;
+  left: 47%;
+  z-index: 4;
+}
+
+.light {
+  width: 18%;
+  top: -2%;
+}
+#light-1 {
+  left: 7%;
+}
+#light-2 {
+  right: 7%;
+}
+/*********** 
+Form Styling 
+************/
+#form {
+  display: flex;
+  flex-flow: row wrap;
+}
+#form-title {
+  font-size: 1.5em;
+  padding: 0 0 1em 0.25em;
+  margin: 0 0.5em;
+}
+#form-cont {
+  background-color: #99bba0;
+  /* background-color: #aad0b2; */
+  padding: 1em 0;
+}
+
+#form-cont label {
+  font-size: 1.4em;
+  padding: 0 0.25em 0 0.75em;
+}
+#form-cont input {
+  padding: 0.1em 0.2em;
+  font-size: 1.2em;
+  border-radius: 0.3em;
+  border: none;
+  box-shadow: 1px 1px 1px 1px #667d6b;
+  outline-color: #667d6b;
+}
+#form-cont input:focus {
+  outline: none;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #667d6b;
+}
+input[type="submit"] {
+  margin-left: 0.5em;
+  font-size: 1.2em;
+}
+
+/**************
+Footer styling
+***************/
+
+#footer-cont {
+  justify-content: space-between;
+  padding: 3em 1.5em 1em 1.5em;
+  background-color: #c4dec9;
+  display: flex;
+  flex-flow: row wrap;
+}
+#logos {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2.5em;
+}
+.ionicon {
+  width: 30px;
+}
+
+/**************** 
+Form.html Styling
+*****************/
+#footer-about-page {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#form-page-main {
+  height: 75vh;
+}
+#form-page-cont {
+  margin: 0 auto;
+  width: 75%;
+}
+#form-page-cont h3 {
+  font-size: 2em;
+  color: #445347;
+}
+#form-page-cont p {
+  font-size: 1.25em;
+}
+
+/**********************************
+Media Queries for responsive design
+**********************************/
+/*Adjustments for large screen and TV size  */
+
+@media screen and (min-width: 1800px) {
+  #form-main-cont {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.2em;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1800px) {
+  #form-main-cont {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.2em;
+  }
+}
+
+/*Adjustments for desktop screen size  */
+@media screen and (min-width: 1050px) and (max-width: 1440px) {
+  section {
+    width: 75%;
+  }
+}
+
+/*Adjustments for tablet to small laptop screen size  */
+@media screen and (min-width: 900px) and (max-width: 1050px) {
+  section {
+    width: 80%;
+  }
+}
+
+/*Adjustments for large phone to small tablet screen size  */
+@media screen and (min-width: 750px) and (max-width: 900px) {
+  section {
+    width: 90%;
+  }
+}
+
+/*Adjustments for phone screen size  */
+@media screen and (max-width: 750px) {
+  section {
+    width: 95%;
+  }
+  main {
+    padding: 1em 0;
+  }
+  #form {
+    gap: 1.2em;
+    flex-direction: column;
+    margin-bottom: 1.2em;
+  }
+  #form-title {
+    font-size: 1.3em;
+  }
+  #submit-btn {
+    margin-left: 3.7em;
+    width: 9.2em;
+  }
+  #grid-cont {
+    margin: 0 auto 1em auto;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  #grid-cont {
+    margin: 1em auto;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 560px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 560px) {
+  .header-flex-cont {
+    padding: 1.5em 1em;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  .nav-home:link,
+  .nav-home:visited {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  .header-flex-cont {
+    padding: 0.5em 1em;
+  }
+  #logos {
+    gap: 1em;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header-flex-cont {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .nav-home:link,
+  .nav-home:visited {
+    font-size: 1.75em;
+  }
+  #form-title {
+    font-size: 1em;
+    padding: 0 0 1em 0.25em;
+    margin: 0 0.5em;
+  }
+  #form-cont label {
+    font-size: 1em;
+  }
+  #form-cont input {
+    font-size: 1em;
+    border-radius: 0.4em;
+  }
+  #submit-btn {
+    margin-left: 3.3em;
+    width: 9.2em;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #footer-cont {
+    gap: 1em;
+  }
+}
